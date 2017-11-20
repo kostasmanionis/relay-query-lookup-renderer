@@ -118,6 +118,7 @@ class ReactRelayQueryRenderer extends React.Component<Props, State> {
             if (props.lookup && environment.check(operation.root)) {
                 // data is available in the store, render without making any requests
                 const snapshot = environment.lookup(operation.fragment);
+                // environment.retain(operation.root)
                 return {
                     error: null,
                     props: snapshot.data,
